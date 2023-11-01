@@ -37,40 +37,40 @@ local function Antis()
 		 	        Player.Character.HumanoidRootPart.CFrame = oldposition 
 		       end
 	  end
-    if antifreeze == true then
+   	  if antifreeze == true then
 	      	if game.Players.LocalPlayer.Character:FindFirstChild("ice") then
         	  	Chat("thaw me")
-		      end
+		 end
 	  end
-    if antipunish == true then
+    	  if antipunish == true then
 	      	if game.Lighting:FindFirstChild(game.Players.LocalPlayer.Name) then
                 	Chat("unpunish me")
 	        end
-    end
+          end
 	  if antiblind == true then
 		      for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
-                 if v.Name == "EFFECTGUIBLIND" then
+                		 if v.Name == "EFFECTGUIBLIND" then
 			                 Chat("unblind me")
-                 end
+                		 end
 		      end
-    end
-    if anticlone == true then
+    	  end
+  	  if anticlone == true then
 		      if game:GetService("Workspace").Terrain["_Game"].Folder:FindFirstChild(game.Players.LocalPlayer.Name) then
                 	Chat("unclone me")
 		      end
-    end
-    if antiseizure == true then
+   	  end
+   	  if antiseizure == true then
 	      	if game.Players.LocalPlayer.Character:FindFirstChild("Seizure") then
                 	Chat("unseizure me")
 	      	end
-    end
-    if antifly == true then
+    	  end
+    	  if antifly == true then
 	      	if not game.Players.LocalPlayer.Character:FindFirstChild("Seizure") and game.Players.LocalPlayer.Character.Humanoid:GetState().Name=="PlatformStanding" then
                 	Chat("unfly me")
                 	Chat("clip me")
-		      end
-    end
-  	if antikill == true then
+		end
+          end
+  	  if antikill == true then
     		if game.Players.LocalPlayer.Character then
         		if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
            			 Chat("reset me")
@@ -82,18 +82,18 @@ local function Antis()
 			          Chat("normal me")
 	      	end
 	  end
-  	if antisparkles == true then
+  	  if antisparkles == true then
 		      if game.Players.LocalPlayer.Character.Torso:FindFirstChild("Sparkles") then
 			          Chat("unsparkles me")
 		      end
-  	end
-  	if antifire == true then
+  	  end
+  	  if antifire == true then
 	      	if game.Players.LocalPlayer.Character:FindFirstChild("Torso") then
 		            if game.Players.LocalPlayer.Character.Torso:FindFirstChild("Fire") then
 				                Chat("unfire me")
 		          	end
 		      end
-  	end	
+  	  end	
 	  if antismoke == true then
 		      if game.Players.LocalPlayer.Character:FindFirstChild("Torso") then
 			          if game.Players.LocalPlayer.Character.Torso:FindFirstChild("Smoke") then
@@ -105,7 +105,7 @@ local function Antis()
 		      if not game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == 16 then
 		          	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 	      	end
-  	end
+  	  end
   end
 end
 Antis()
