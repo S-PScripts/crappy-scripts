@@ -3,10 +3,10 @@ local anticrash = true
 local blacklistedTools = {"OrinthianSwordAndShield", "VampireVanquisher"}
 
 local function warnCrash(player, toolName)
-       Chat("ungear " .. player.Name)
-       Chat("punish " .. player.Name)
-       Chat("h \n\n\n Sorry, " .. player.Name .. ", you cannot use " .. toolName .. " because of anticrash. \n\n\n")
-       Chat("clr")
+       game.Players:Chat(("ungear " .. player.Name)
+       game.Players:Chat(("punish " .. player.Name)
+       game.Players:Chat(("h \n\n\n Sorry, " .. player.Name .. ", you cannot use " .. toolName .. " because of anticrash. \n\n\n")
+       game.Players:Chat(("clr")
 end
 
 local function checkPlayerBackpack(player)
