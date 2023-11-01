@@ -1,4 +1,4 @@
-function slowuser()
+local function slowuser()
         while slowuser == true do
               game.Players:Chat("gear ".. caruser .." 253519495")
               time.wait(0)
