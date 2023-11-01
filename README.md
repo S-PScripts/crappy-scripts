@@ -1,2 +1,5 @@
 # crappy-scripts
-testsete
+sticking out your gyatt for the rizzler
+you're so skibidi
+you're so fanum tax
+i just wanna be your sigma
