@@ -10,12 +10,12 @@ antiblind = true
 antismoke = true
 antifire = true
 antisparkles = true
-antichat = false
+antichat = true
 antirocket = true
 antikill = true
 antispeed = true
 antiswag = true
-antifly = false
+antifly = true
 antiseizure = true
 anticlone = true
 
