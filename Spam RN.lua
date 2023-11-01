@@ -1,6 +1,6 @@
 local function spammer()
     while spam == true do
-	         game.Players:Chat((spammer)
+	         game.Players:Chat(spammer)
            time.wait(0)
     end
 end
