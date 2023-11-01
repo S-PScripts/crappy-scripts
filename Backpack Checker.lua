@@ -1,6 +1,6 @@
 -- https://github.com/Tech-187/Lua-scripts/blob/main/Inventory%20tool%20checker
 
-function checkuser()
+local function checkuser()
 local checkme = game.Players:FindFirstChild(checker)
 local Backpack = checkme:FindFirstChild("Backpack")
 if Backpack then
