@@ -8,7 +8,7 @@ if not myversion == currentversion then
     print("Current Version:",currentversion)
 end
 
-if not error == true then
+if error == true then
 		game.Players.LocalPlayer:Kick(errorcode,"Use",currentversion,"instead of",myversion"!")
     -- while true do end
 end
