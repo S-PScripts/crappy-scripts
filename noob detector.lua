@@ -7,7 +7,7 @@ plr.Chatted:Connect(function(msg)
             local connection = v.Chatted:Connect(function(message)
                 if message:lower() == ";fly" or message:lower() == ";fly me" then
                    print(v.Name..' is a noob.')
-                   game:Players:Chat(v.Name..', it is fly me, not ;fly!!")
+                   game:Players:Chat(v.Name.." it is fly me, not ;fly!!")
             end)
             table.insert(connections, connection)
         end
