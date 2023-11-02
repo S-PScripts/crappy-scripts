@@ -13,9 +13,9 @@ end)
 local UserInputService = game:GetService("UserInputService")
 UserInputService.WindowFocusReleased:Connect(function()
     if autoafk == true then
-    	Chat("name me AFK")
-    	Chat("ff me")
-    	Chat("god me")
+    	game.Players:Chat("name me AFK")
+    	game.Players:Chat("ff me")
+    	game.Players:Chat("god me")
     end
     task.wait()
 end)
@@ -23,9 +23,9 @@ end)
 -- afk code off
 UserInputService.WindowFocused:Connect(function()
     if autoafk == true then
-        Chat("reset me")
-        Chat("unff me")
-        Chat("ungod me")
+        game.Players:Chat("reset me")
+        game.Players:Chat("unff me")
+        game.Players:Chat("ungod me")
     end
     task.wait()	
 end)
