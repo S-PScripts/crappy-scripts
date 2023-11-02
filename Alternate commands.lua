@@ -48,4 +48,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if command == "undog" then
           game.Players:Chat("undog me")
     end
+    if command == "unfire" then
+                  game.Players:Chat("undog me")
+
 end)
