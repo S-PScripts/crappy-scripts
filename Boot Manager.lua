@@ -1,4 +1,4 @@
-myversion = "v1.9
+myversion = "v1.9"
 currentversion = "v2.0" --you keep this on a seperate loadstring. you obsfucate the code with myversion. if a user attempts to boot an old obfsucated version it will fail
 
 errorcode = "ERROR: Invalid Version."
