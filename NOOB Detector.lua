@@ -7,19 +7,19 @@ plr.Chatted:Connect(function(msg)
             local connection = v.Chatted:Connect(function(message)
                 if message:lower() == ";fly" then
                    print(v.Name..' is a noob.')
-                   game.Players:Chat(v.Name..', it is fly me, not ;fly!!')
+                   game.Players:Chat('h '..v.Name..', it is fly me, not ;fly!!')
                 end
                 if message:lower() == ";fly me" then
                    print(v.Name..' is a noob.') 
-                   game.Players:Chat(v.Name..', imagine using the ; prefix! You dont need any!!')
+                   game.Players:Chat('h '..v.Name..', imagine using the ; prefix! You dont need any!!')
                 end
                 if message:lower():find(";bring") or message:lower():find(":bring") and v ~= game.Players.LocalPlayer then
                    print(v.Name..' is a noob.')
-                   game.Players:Chat(v.Name..', it is tp (plr) me, not ;bring!!')
+                   game.Players:Chat('h '..v.Name..', it is tp (plr) me, not ;bring!!')
                 end
                 if message:lower():find(";goto") or message:lower():find(":goto") and v ~= game.Players.LocalPlayer then
                    print(v.Name..' is a noob.') 
-                   game.Players:Chat(v.Name..', it is tp me (plr), not ;goto!!')
+                   game.Players:Chat('h '..v.Name..', it is tp me (plr), not ;goto!!')
                 end
             end)
             table.insert(connections, connection)
