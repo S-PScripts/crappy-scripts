@@ -16,4 +16,11 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
             end
       	end
     end
-  end)
+    if command == ".stopmusic" then
+	for i, v in pairs(game:GetDescendants()) do
+        	if v:IsA("Sound") then
+                        v:Stop()
+        	end
+        end   
+    end
+end)
