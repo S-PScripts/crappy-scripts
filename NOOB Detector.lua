@@ -12,7 +12,15 @@ plr.Chatted:Connect(function(msg)
                 if message:lower() == ";fly me" then
                    print(v.Name..' is a noob.') 
                    game.Players:Chat(v.Name..', imagine using the ; prefix! You dont need any!!')
-                   end
+                end
+                if message:lower() == ";bring" then
+                   print(v.Name..' is a noob.')
+                   game.Players:Chat(v.Name..', it is tp (plr) me, not ;bring!!')
+                end
+                if message:lower() == ";goto" then
+                   print(v.Name..' is a noob.') 
+                   game.Players:Chat(v.Name..', it is tp me (plr), not ;goto!!')
+                end
             end)
             table.insert(connections, connection)
         end
