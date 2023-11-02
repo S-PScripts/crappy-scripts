@@ -13,11 +13,11 @@ plr.Chatted:Connect(function(msg)
                    print(v.Name..' is a noob.') 
                    game.Players:Chat(v.Name..', imagine using the ; prefix! You dont need any!!')
                 end
-                if message:lower() == ";bring" then
+                if message:lower():find(";bring") or message:lower():find(":bring") and v ~= game.Players.LocalPlayer then
                    print(v.Name..' is a noob.')
                    game.Players:Chat(v.Name..', it is tp (plr) me, not ;bring!!')
                 end
-                if message:lower() == ";goto" then
+                if message:lower():find(";goto") or message:lower():find(":goto") and v ~= game.Players.LocalPlayer then
                    print(v.Name..' is a noob.') 
                    game.Players:Chat(v.Name..', it is tp me (plr), not ;goto!!')
                 end
