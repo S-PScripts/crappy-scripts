@@ -9,6 +9,10 @@ plr.Chatted:Connect(function(msg)
                     print(v.Name..' is using /c system or whispering commands.')
                     game.Players:Chat('h '..v.Name..' is using /c system or whispering commands.')
                 end
+                if string.sub(msg:lower(), 0, 4) == "logs" or string.sub(msg:lower(), 0, 5) == ":logs" and v ~= game.Players.LocalPlayer then
+                    print(v.Name..' is using logs.')
+                    game.Players:Chat('h '..v.Name..' is using logs.')
+                end
             end)
             table.insert(connections, connection)
         end
