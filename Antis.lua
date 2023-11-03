@@ -10,7 +10,6 @@ antiblind = true
 antismoke = true
 antifire = true
 antisparkles = true
-antichat = true
 antirocket = true
 antikill = true
 antispeed = true
@@ -18,13 +17,11 @@ antiswag = true
 antifly = true
 antiseizure = true
 anticlone = true
+antimsg = true
 
 local function Antis()
   while true do
   	task.wait()
-	  if antichat == true then
-		    Chat("h \n\n\n 😀😃😄😁😆😅😂🤣😭💀💀💀💀💀💀💀💀💀😀😃😄😁😆😅😂🤣😭💀💀💀💀💀💀💀💀💀 \n\n\n")
-            end
 	  if antijail == true then
 		      if game:GetService("Workspace").Terrain["_Game"].Folder:FindFirstChild(game.Players.LocalPlayer.Name.."'s jail") then
 			        Chat("unjail me")
@@ -54,6 +51,13 @@ local function Antis()
                 		 end
 		      end
     	  end
+	  if antimsg = true then
+		     for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
+              		         if v.Name == "MessageGUI" or v.Name == "Message" or v.Name == "HintGUI" or v.Name == "Ice" then
+                   			 v:Destroy()
+                		end
+            	     end
+          end
   	  if anticlone == true then
 		      if game:GetService("Workspace").Terrain["_Game"].Folder:FindFirstChild(game.Players.LocalPlayer.Name) then
                 	Chat("unclone me")
