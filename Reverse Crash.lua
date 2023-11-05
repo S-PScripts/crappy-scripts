@@ -6,7 +6,7 @@ plr.Chatted:Connect(function(msg)
         for _, v in pairs(game.Players:GetPlayers()) do
             local connection = v.Chatted:Connect(function(message)
                 if message:lower():find("94794847") and v ~= game.Players.LocalPlayer then
-                   game.Players:Chat('h bro trying to crash haha i crashed first')
+                   game.Players:Chat('h '..v.Name..' are you trying to crash because haha i crashed first')
                    Crash()
                 end
             end)
