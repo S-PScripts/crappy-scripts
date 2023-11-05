@@ -3,7 +3,7 @@ local antigear = true
 local function warnGear(player, toolName)
        game.Players:Chat("ungear " .. player.Name)
        game.Players:Chat("punish " .. player.Name)
-       game.Players:Chat("h \n\n\n Sorry, " .. player.Name .. ", you cannot use " .. toolName .. " because of antigear. \n\n\n")
+       game.Players:Chat("h \n\n\n Sorry, " .. player.Name .. ", you cannot use " .. toolName.Name .. " because of antigear. \n\n\n")
        game.Players:Chat("clr")
 end
 
@@ -13,15 +13,13 @@ local function checkPlayerGBackpack(player)
         for _, toolName in ipairs(player.Backpack:GetChildren()) do
     	    if toolName:IsA("Tool") and antigear then
 	             if player.Name ~= game.Players.LocalPlayer.Name then
-                        warnGear(player, toolName)
+                        warnGear(player, toolName.Name)
                         break
 		     end
             end
         end
     end
 end
-
-game.Players.PlayerAdded:Connect(onPlayerAdded)
 
 game.Players.PlayerAdded:Connect(function(player)
     player.CharacterAdded:Connect(function(character)
