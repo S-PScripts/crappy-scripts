@@ -15,3 +15,13 @@ plr.Chatted:Connect(function(msg)
         end
     end
 end)
+
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local command = string.lower(msg)
+    if command == ".antic" then
+        noobs = true
+    end
+    if command == ".unantic" then
+        noobs = false
+    end
+end)
