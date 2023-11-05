@@ -12,18 +12,17 @@ local function checkPlayerGBackpack(player)
     if gbackpack then
         for _, toolName in ipairs(player.Backpack:GetChildren()) do
     	    if toolName:IsA("Tool") and antigear then
-	             if player.Name == game.Players.LocalPlayer.Name then
-                       break
-               else
-                       warnGear(player, toolName)
-                       break
-               end
+	             if player.Name ~= game.Players.LocalPlayer.Name then
+                        warnGear(player, toolName)
+                        break
+		     end
             end
         end
     end
 end
 
--- backpack gear
+game.Players.PlayerAdded:Connect(onPlayerAdded)
+
 game.Players.PlayerAdded:Connect(function(player)
     player.CharacterAdded:Connect(function(character)
         checkPlayerGBackpack(player)
@@ -31,7 +30,6 @@ game.Players.PlayerAdded:Connect(function(player)
     checkPlayerGBackpack(player)
 end)
 
--- backpack gear
 game:GetService("RunService").Heartbeat:Connect(function()
     for _, player in ipairs(game.Players:GetPlayers()) do
         if player.Character then
