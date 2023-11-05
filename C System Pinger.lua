@@ -18,3 +18,14 @@ plr.Chatted:Connect(function(msg)
         end
     end
 end)
+
+
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local command = string.lower(msg)
+    if command == ".csystem" then
+        csystem = true
+    end
+    if command == ".uncsystem" then
+        csystem = false
+    end
+end)
