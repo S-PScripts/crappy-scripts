@@ -14,3 +14,13 @@ game:GetService("RunService").RenderStepped:Connect(function()
             end
         end
 end)
+
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local command = string.lower(msg)
+    if command == ".antivg" then
+        antivg = true
+    end
+    if command == ".unantivg" then
+        antivg = false
+    end
+end)
