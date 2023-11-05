@@ -24,9 +24,6 @@ local function checkPlayerBackpack(player)
     end
 end
 
-
-game.Players.PlayerAdded:Connect(onPlayerAdded)
-
 game.Players.PlayerAdded:Connect(function(player)
     player.CharacterAdded:Connect(function(character)
         checkPlayerBackpack(player)
