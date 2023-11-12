@@ -41,4 +41,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 			print("Current Music ID: "..workspace.Terrain._Game.Folder.Sound.SoundId)
 	end
    end
+   if string.sub(msg:lower(), 1, 14) == ".playbackspeed" then
+		local newPlaybackSpeed = tonumber(string.sub(msg:lower(), 16))
+		local Sound = game:GetService("Workspace").Terrain["_Game"].Folder.Sound
+		Sound.PlaybackSpeed = newPlaybackSpeed
+   end
 end)
