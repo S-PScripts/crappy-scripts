@@ -9,7 +9,7 @@ end
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local command = string.lower(msg)
     if string.sub(msg:lower(), 1, 7) == ".gmusic" then
-        local musicplay = string.sub(msg:lower(), 8)
+        local musicplay = tonumber(string.sub(msg:lower(), 8))
         if musicplay ~= nil and musicplay >= 1 and musicplay <= #musiclist then
             Chat("h \n\n\n [musich] Playing music:" .. musicnames[musicplay] .. "! \n\n\n")
             Chat("music " .. musiclist[musicplay])
