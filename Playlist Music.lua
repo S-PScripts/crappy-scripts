@@ -9,7 +9,7 @@ end
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local command = string.lower(msg)
     if string.sub(msg:lower(), 1, 7) == ".gmusic" then
-        local musicplay = tonumber(string.sub(msg:lower(), 8))
+        musicplay = tonumber(string.sub(msg:lower(), 8))
         if musicplay ~= nil and musicplay >= 1 and musicplay <= #musiclist then
             Chat("h \n\n\n [musich] Playing music:" .. musicnames[musicplay] .. "! \n\n\n")
             Chat("music " .. musiclist[musicplay])
@@ -18,24 +18,24 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         end
     end
     if command == ".rgmusic" then
-        local musicplay = math.random(1, #musiclist)
+        musicplay = math.random(1, #musiclist)
         Chat("h \n\n\n [musich] Playing music:" .. musicnames[musicplay] .. "! \n\n\n")
         Chat("music " .. musiclist[musicplay])
     end
     if command == ".next" then
        if musicplay == nil or musicplay == #musiclist  then
-           local musicplay = 1
+          musicplay = 1
        else            
-           local musicplay = musicplay + 1
+          musicplay = musicplay + 1
        end
        Chat("h \n\n\n [musich] Playing music:" .. musicnames[musicplay] .. "! \n\n\n")
        Chat("music " .. musiclist[musicplay])
     end
     if command == ".previous" then
        if musicplay == nil or musicplay == 1  then
-           local musicplay = 5
+          musicplay = #musiclist
        else            
-           local musicplay = musicplay - 1
+          musicplay = musicplay - 1
        end
        Chat("h \n\n\n [musich] Playing music:" .. musicnames[musicplay] .. "! \n\n\n")
        Chat("music " .. musiclist[musicplay])
