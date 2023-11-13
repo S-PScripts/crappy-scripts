@@ -3,25 +3,30 @@ local whitelist = {"scriptingprogrammer","me_123eq","me_crashking"}
 local blacklist = {}
 local slockenabled = false
 
-function checkforplayer(plr)
-    local players = game.Players:GetPlayers()
-    for i, v in pairs(players) do
-        if string.find(v.Name:lower(), plr:lower()) then
-            player = v.Name
-            break
+local Players = game:GetService("Players")
+local function checkforplayer(name)
+    name = name:lower()
+    for _, player in ipairs(Players:GetPlayers()) do
+        if name == player.Name:lower():sub(1, #name) then
+            return player
         end
     end
+    return nil
 end
+
+
+game.Players:Chat("h \n\n\n [SlockD] Serverslock is possible.  \n\n\n")
 
 function slock()
     local players = game.Players:GetPlayers()
     for i, v in pairs(game.Workspace:GetChildren()) do
         if v.Name ~= game.Players.LocalPlayer.Name and not table.find(whitelist, v.Name) then
-            for j, player in ipairs(players) do
+            for i, player in ipairs(players) do
                 if string.find(player.Name:lower(), v.Name:lower()) then
                     if slockenabled == true or table.find(blacklist, v.Name) then
                         if not game.Lighting:FindFirstChild(v.Name) then
                                 game.Players:Chat('punish '..v.Name)
+                                game.Players:Chat('pm '..v.Name..' sorry, you are blacklisted!')
                         end
                     end
                     break
@@ -32,33 +37,53 @@ function slock()
 end 
 
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
-    if string.sub(msg, 1, #prefix+2) == prefix..'wl' then
-        checkforplayer(string.sub(msg, #prefix+4, #msg))
-        table.insert(whitelist, player)
-        game.Players:Chat('unpunish '..player)
+    if string.sub(msg:lower(), 1, #prefix+2)  == prefix..'wl' then
+         local dasplayer = string.sub(msg:lower(), 1, #prefix+4)
+         local player = checkforplayer(dasplayer)
+         if player then
+                table.insert(whitelist, player.Name)
+                game.Players:Chat('unpunish '..player.Name)
+         else
+                game.Players:Chat('Cannot find player with the name: '..dasplayer)
+         end
     end
     
-    if string.sub(msg, 1, #prefix+4) == prefix..'unwl' then
-        checkforplayer(string.sub(msg, #prefix+6, #msg))
-        table.remove(whitelist,player)
+    if string.sub(msg:lower(), 1, #prefix+4) == prefix..'unwl' then
+         local dasplayer = string.sub(msg:lower(), 1, #prefix+6)
+         local player = checkforplayer(dasplayer)
+         if player then
+                table.remove(whitelist, player.Name)
+         else
+                game.Players:Chat('Cannot find player with the name: '..dasplayer)
+         end
     end
 
-    if string.sub(msg, 1, #prefix+2) == prefix..'bl' then
-        checkforplayer(string.sub(msg, #prefix+4, #msg))
-        table.insert(blacklist, player)
+    if string.sub(msg:lower(), 1, #prefix + 2) == prefix..'bl' then
+         local dasplayer = string.sub(msg:lower(), 1, #prefix+4)
+         local player = checkforplayer(dasplayer)
+         if player then
+                table.insert(blacklist, player.Name)
+         else
+                game.Players:Chat('Cannot find player with the name: '..dasplayer)
+         end
     end
 
-    if string.sub(msg, 1, #prefix+4) == prefix..'unbl' then
-        checkforplayer(string.sub(msg, #prefix+6, #msg))
-        table.remove(blacklist,player)
-        game.Players:Chat('unpunish '..player)
+    if string.sub(msg:lower(), 1, #prefix + 4) == prefix..'unbl' then
+         local dasplayer = string.sub(msg:lower(), 1, #prefix+6)
+         local player = checkforplayer(dasplayer)
+         if player then
+                table.remove(blacklist, player.Name)
+                game.Players:Chat('unpunish '..player.Name)
+         else
+                game.Players:Chat('Cannot find player with the name: '..dasplayer)
+         end
     end
     
-    if string.sub(msg, 1, #prefix+5) == prefix..'slock' then
+    if string.sub(msg:lower(), 1, #prefix + 5) == prefix..'slock' then
         slockenabled = true
     end
     
-    if string.sub(msg, 1, #prefix+7) == prefix..'unslock' then
+    if string.sub(msg:lower(), 1, #prefix + 6) == prefix..'unslock' then
         slockenabled = false
         game.Players:Chat('unpunish all')
     end
