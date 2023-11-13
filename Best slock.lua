@@ -1,4 +1,4 @@
-local prefix = '/'
+local prefix = '.'
 local whitelist = {"scriptingprogrammer","me_123eq","me_crashking"}
 local blacklist = {}
 local slockenabled = false
@@ -42,7 +42,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
                 table.insert(whitelist, player.Name)
                 game.Players:Chat('unpunish '..player.Name)
          else
-                game.Players:Chat('Cannot find player with the name: '..dasplayer)
+                print('Cannot find player with the name: '..dasplayer)
          end
     end
     
@@ -52,7 +52,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
          if player ~= nil then
                 table.remove(whitelist, player.Name)
          else
-                game.Players:Chat('Cannot find player with the name: '..dasplayer)
+                print('Cannot find player with the name: '..dasplayer)
          end
     end
 
@@ -62,7 +62,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
          if player ~= nil then
                 table.insert(blacklist, player.Name)
          else
-                game.Players:Chat('Cannot find player with the name: '..dasplayer)
+                print('Cannot find player with the name: '..dasplayer)
          end
     end
 
@@ -73,7 +73,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
                 table.remove(blacklist, player.Name)
                 game.Players:Chat('unpunish '..player.Name)
          else
-                game.Players:Chat('Cannot find player with the name: '..dasplayer)
+                print('Cannot find player with the name: '..dasplayer)
          end
     end
     
