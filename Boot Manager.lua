@@ -9,6 +9,6 @@ if not myversion == currentversion then
 end
 
 if error == true then
-		game.Players.LocalPlayer:Kick(errorcode,"Use",currentversion,"instead of",myversion"!")
+		game.Players.LocalPlayer:Kick(errorcode,"Use",currentversion,"instead of",myversion,"!")
     -- while true do end
 end
