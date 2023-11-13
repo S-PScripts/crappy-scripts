@@ -39,7 +39,7 @@ end
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if string.sub(msg:lower(), 1, #prefix + 2)  == prefix..'wl' then
          local dasplayer = string.sub(msg:lower(), #prefix + 4)
-         local player = checkforplayer(dasplayer)
+         checkforplayer(dasplayer)
          if player ~= nil then
                 table.insert(whitelist, player.Name)
                 game.Players:Chat('unpunish '..player.Name)
@@ -50,7 +50,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     
     if string.sub(msg:lower(), 1, #prefix + 4) == prefix..'unwl' then
          local dasplayer = string.sub(msg:lower(), #prefix + 6)
-         local player = checkforplayer(dasplayer)
+         checkforplayer(dasplayer)
          if player ~= nil then
                 table.remove(whitelist, player.Name)
          else
@@ -60,7 +60,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 
     if string.sub(msg:lower(), 1, #prefix + 2) == prefix..'bl' then
          local dasplayer = string.sub(msg:lower(), #prefix + 4)
-         local player = checkforplayer(dasplayer)
+         checkforplayer(dasplayer)
          if player ~= nil then
                 table.insert(blacklist, player.Name)
          else
@@ -70,7 +70,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 
     if string.sub(msg:lower(), 1, #prefix + 4) == prefix..'unbl' then
          local dasplayer = string.sub(msg:lower(), #prefix + 6)
-         local player = checkforplayer(dasplayer)
+         checkforplayer(dasplayer)
          if player ~= nil then
                 table.remove(blacklist, player.Name)
                 game.Players:Chat('unpunish '..player.Name)
