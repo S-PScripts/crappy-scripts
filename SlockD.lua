@@ -11,11 +11,10 @@ function checkforplayer(plr)
           print(player)
       end
   end
-  print("DEBUG MESSAGE")
 end
 
 
-game.Players:Chat("h \n\n\n [SlockD] Serverslock is possible.  \n\n\n")
+game.Players:Chat("h \n\n\n [SlockD] Blacklisting is possible. \n\n\n")
 
 function slock()
     local players = game.Players:GetPlayers()
@@ -52,7 +51,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
          local dasplayer = string.sub(msg:lower(), #prefix + 6)
          checkforplayer(dasplayer)
          if player ~= nil then
-                table.remove(whitelist, player)
+                table.remove(whitelist, table.find(whitelist, player))
          else
                 print('Cannot find player with the name: '..dasplayer)
          end
@@ -72,7 +71,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
          local dasplayer = string.sub(msg:lower(), #prefix + 6)
          checkforplayer(dasplayer)
          if player ~= nil then
-                table.remove(blacklist, player)
+                table.remove(blacklist, table.find(blacklist, player))
                 game.Players:Chat('unpunish '..player)
          else
                 print('Cannot find player with the name: '..dasplayer)
