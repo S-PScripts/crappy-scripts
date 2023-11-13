@@ -5,7 +5,7 @@ local function Chat(msg)
         game.Players:Chat(msg)
 end
 
-Chat("h \n\n\n [musich]: executed! \n\n\n")
+Chat("h \n\n\n [musich lite]: executed! \n\n\n")
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
     local command = string.lower(msg)
     if string.sub(msg:lower(), 1, 7) == ".gmusic" then
