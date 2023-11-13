@@ -8,8 +8,10 @@ function checkforplayer(plr)
   for i, v in pairs(game.Players:GetPlayers()) do
       if string.sub(v.Name:lower(), 1, #plr) == plr then
           player = v.Name
-        end
-    end
+          print(player)
+      end
+  end
+  print("an error occured")
 end
 
 
