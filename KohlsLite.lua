@@ -98,6 +98,7 @@ print("super (text) - do that command an amount of times")
 print("supera - set amount of times super command does")
 print("slowplayer - slow a player/players down with the car gear. stops their perm gamepass!")
 print("nameducker - spam names a user/users. naming currently breaks your camera.")
+print("hcrash - spam h command that is full of emojis")
 
 
 print("-----------PAINTS------------")
