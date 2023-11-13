@@ -17,10 +17,11 @@ print("antisparkles - if you are sparkled it'll unsparkle you")
 print("antispeed - if you are sped it'll reset your speed to 16")
 print("antiswag - if you are swagged it'll unswag you")
 print("antimessage - if you are messaged by pm/m/h it'll remove the effect")
-print("You are able to apply these to the following users:
+print("canti (name) - check an anti's status. put all for the full status of all antis")
+print("You are able to apply these to the following users:")
 print("Yourself, All, Others")
 
-print("---------More ANTIS----------")
+print("---------MORE ANTIS----------")
 print("antiattach - prevent people attaching")
 print("antiattach2 - stops people attaching with ivory")
 print("nok/noobbykill - stops the obby bricks killing you")
@@ -58,7 +59,7 @@ print("noob - anyone using :poop or ;fly  or commands like that get roasted")
 print("cysd - detect users using /c system or /w")
 print("logd - detect users using logs")
 
-print("---------MUSIC STUFF-------")
+print("--------MUSIC STUFF--------")
 print("gmusic - playsaved music ids from a list")
 print("musicid - check music id of current music")
 print("volume - set the volume of the music")
@@ -75,6 +76,39 @@ print("mmoid - set the music id for mmo")
 print("musicon - turns mmo off, but keeps the id")
 print("musicoff - mmo works again!")
 print("antimusic - stops music from starting")
+
+print("-----------BANS------------")
+print("gearban - gear ban a user with the portable justice!")
+
+print("---------CHECKERS----------")
+print("checkbp - check a player's backpack")
+
+print("--------QUICK STUFF--------")
+print("quicklua (text) - execute lua script via chat")
+print("quickattach (text) - does sit,punish and unpunish automatically")
+print("bring - alternate of tp (plr) me")
+print("goto - alternate of tp me (plr)")
+print("savepos - save your current position")
+print("gotopos - goto to your saved position")
+print("cpos - check the savepos")
+
+print("-------SPAM RELATED---------")
+print("spam (text) - spam desired text")
+print("super (text) - do that command an amount of times")
+print("supera - set amount of times super command does")
+print("slowplayer - slow a player/players down with the car gear. stops their perm gamepass!")
+print("nameducker - spam names a user/users. naming currently breaks your camera.")
+
+
+print("-----------PAINTS------------")
+print("fixpaint - fix the paint")
+print("pmap (text) - paint the map a colour")
+
+print("-----------REVERSES----------")
+print("reversecrash - someone tries to crash, you crash first!")
+
+print("-------------YOU-------------")
+print("autoafk - say you're afk when you are off the roblox window [PC Only]")
 
 print("---------SETTINGS--------")
 print("prefix - change the prefix")
