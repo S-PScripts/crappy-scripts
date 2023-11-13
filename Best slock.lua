@@ -4,14 +4,12 @@ local blacklist = {}
 local slockenabled = false
 
 local Players = game:GetService("Players")
-local function checkforplayer(name)
-    name = name:lower()
-    for _, player in ipairs(Players:GetPlayers()) do
-        if name == player.Name:lower():sub(1, #name) then
-            return player
+function checkforplayer(plr)
+  for i, v in pairs(game.Players:GetPlayers()) do
+      if string.sub(v.Name:lower(), 1, #plr) == plr then
+          player = v.Name
         end
     end
-    return nil
 end
 
 
