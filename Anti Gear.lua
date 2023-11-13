@@ -1,3 +1,13 @@
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local command = string.lower(msg)
+    if command == ".antigear" then
+        antigear = true
+    end
+    if command == ".unantigear" then
+        antigear = false
+    end
+end)
+
 local antigear = true
 
 local function warnGear(player, toolName)
