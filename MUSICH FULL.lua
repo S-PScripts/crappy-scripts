@@ -110,6 +110,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if command == ".onmusic" then
         musicoff = false
     end
+    if command == ".restart" then
+       if workspace.Terrain._Game.Folder:FindFirstChild("Sound") then
+	  local myid  = workspace.Terrain._Game.Folder.Sound.SoundId 
+	  game.Players:Chat("music "..myid)
+       end
+     end
 end)
 
 local function musicsettings()  
