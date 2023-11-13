@@ -11,7 +11,7 @@ function checkforplayer(plr)
           print(player)
       end
   end
-  print("an error occured")
+  print("DEBUG MESSAGE")
 end
 
 
@@ -41,8 +41,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
          local dasplayer = string.sub(msg:lower(), #prefix + 4)
          checkforplayer(dasplayer)
          if player ~= nil then
-                table.insert(whitelist, player.Name)
-                game.Players:Chat('unpunish '..player.Name)
+                table.insert(whitelist, player)
+                game.Players:Chat('unpunish '..player)
          else
                 print('Cannot find player with the name: '..dasplayer)
          end
@@ -52,7 +52,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
          local dasplayer = string.sub(msg:lower(), #prefix + 6)
          checkforplayer(dasplayer)
          if player ~= nil then
-                table.remove(whitelist, player.Name)
+                table.remove(whitelist, player)
          else
                 print('Cannot find player with the name: '..dasplayer)
          end
@@ -62,7 +62,7 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
          local dasplayer = string.sub(msg:lower(), #prefix + 4)
          checkforplayer(dasplayer)
          if player ~= nil then
-                table.insert(blacklist, player.Name)
+                table.insert(blacklist, player)
          else
                 print('Cannot find player with the name: '..dasplayer)
          end
@@ -72,8 +72,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
          local dasplayer = string.sub(msg:lower(), #prefix + 6)
          checkforplayer(dasplayer)
          if player ~= nil then
-                table.remove(blacklist, player.Name)
-                game.Players:Chat('unpunish '..player.Name)
+                table.remove(blacklist, player)
+                game.Players:Chat('unpunish '..player)
          else
                 print('Cannot find player with the name: '..dasplayer)
          end
