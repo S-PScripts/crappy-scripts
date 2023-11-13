@@ -1,3 +1,13 @@
+game.Players.LocalPlayer.Chatted:Connect(function(msg)
+    local command = string.lower(msg)
+    if command == ".anticrash" then
+        anticrash = true
+    end
+    if command == ".unanticrash" then
+        anticrash = false
+    end
+end)
+
 local anticrash = true
 
 local blacklistedTools = {"OrinthianSwordAndShield", "VampireVanquisher"}
