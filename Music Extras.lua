@@ -42,8 +42,9 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 	end
    end
    if string.sub(msg:lower(), 1, 14) == ".playbackspeed" then
-		local newPlaybackSpeed = tonumber(string.sub(msg:lower(), 16))
-		local Sound = game:GetService("Workspace").Terrain["_Game"].Folder.Sound
-		Sound.PlaybackSpeed = newPlaybackSpeed
+	local newPlaybackSpeed = tonumber(string.sub(msg:lower(), 16))
+	if newPlaybackSpeed ~= nil and workspace.Terrain._Game.Folder:FindFirstChild("Sound") then
+		workspace.Terrain._Game.Folder.Sound.PlaybackSpeed = newPlaybackSpeed
+	end
    end
 end)
