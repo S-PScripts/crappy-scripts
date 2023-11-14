@@ -22,12 +22,17 @@ function slock()
         if v.Name ~= game.Players.LocalPlayer.Name and not table.find(whitelist, v.Name) then
             for i, player in ipairs(players) do
                 if string.find(player.Name:lower(), v.Name:lower()) then
-                    if slockenabled == true or table.find(blacklist, v.Name) then
+                    if slockenabled == true then
                         if not game.Lighting:FindFirstChild(v.Name) then
                                 game.Players:Chat('punish '..v.Name)
-                                game.Players:Chat('pm '..v.Name..' sorry, you are blacklisted!')
+                                game.Players:Chat('pm '..v.Name..' sorry, this server is locked!')
                         end
-                    end
+                    elseif table.find(blacklist, v.Name) then
+                        if not game.Lighting:FindFirstChild(v.Name) then
+                                game.Players:Chat('punish '..v.Name)
+                                game.Players:Chat('pm '..v.Name..' sorry, this server is blacklisted!')
+                        end
+                    else end
                     break
                 end
             end
