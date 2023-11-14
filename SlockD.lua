@@ -25,14 +25,15 @@ function slock()
                     if slockenabled == true then
                         if not game.Lighting:FindFirstChild(v.Name) then
                                 game.Players:Chat('punish '..v.Name)
-                                game.Players:Chat('pm '..v.Name..' sorry, this server is locked!')
+                                game.Players:Chat('pm [SlockD] '..v.Name..' sorry, this server is locked!')
                         end
                     elseif table.find(blacklist, v.Name) then
                         if not game.Lighting:FindFirstChild(v.Name) then
                                 game.Players:Chat('punish '..v.Name)
-                                game.Players:Chat('pm '..v.Name..' sorry, this server is blacklisted!')
+                                game.Players:Chat('pm [SlockD] '..v.Name..' sorry, you are blacklisted!')
                         end
-                    else end
+                    else 
+                    end
                     break
                 end
             end
