@@ -99,6 +99,11 @@ print("supera - set amount of times super command does")
 print("slowplayer - slow a player/players down with the car gear. stops their perm gamepass!")
 print("nameducker - spam names a user/users. naming currently breaks your camera.")
 print("hcrash - spam h command that is full of emojis")
+print("clogs - clog the logs")
+
+print("------------MAP------------")
+print("icemap - map is ice")
+print("rockmap - map is rock")
 
 print("-----------PAINTS------------")
 print("fixpaint - fix the paint")
