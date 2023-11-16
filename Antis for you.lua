@@ -9,9 +9,11 @@ antimsg = true
 antipunish = true
 antirocket = true
 antiseizure = true
+antisit = true
 antismoke = true
 antisparkles = true
 antispeed = true
+antistun = true
 antiswag = true
 antijail = true
 
@@ -57,6 +59,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         if command == ".unantikill" then
             antikill = false
         end
+        if command == ".antiname" then
+            antiname = true
+        end
+        if command == ".unantiname" then
+            antiname = false
+        end
         if command == ".antimsg" then
             antimsg = true
         end
@@ -81,6 +89,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         if command == ".unantiseizure" then
             antiseizure = false
         end
+        if command == ".antisit" then
+            antisit = true
+        end
+        if command == ".unantisit" then
+            antisit = false
+        end
         if command == ".antismoke" then
             antismoke = true
         end
@@ -98,6 +112,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         end
         if command == ".unantispeed" then
             antispeed = false
+        end
+        if command == ".antistun" then
+            antistun = true
+        end
+        if command == ".unantistun" then
+            antistun = false
         end
         if command == ".antiswag" then
             antiswag = true
@@ -219,7 +239,7 @@ local function Antis()
                 Chat("unjail me")
             end
         end
-       if antiname == true then
+        if antiname == true then
           local player = game.Players:FindFirstChild(game.Players.LocalPlayer.Name)
           if player and player.Character then
                   local modelName = player.Character.Name
@@ -228,7 +248,26 @@ local function Antis()
                         Chat("reset me")
                   end
           end
-      end
+        end
+        if antisit == true then
+             local player = game.Players.LocalPlayer
+             if player.Character then
+                    local humanoid = player.Character:WaitForChild("Humanoid", 5)
+                    if humanoid and humanoid.Sit then
+                        humanoid.Sit = false
+                    end
+             end
+        end
+        if antistun == true then
+            local player = game.Players.LocalPlayer
+             if player.Character then
+                    local humanoid = player.Character:WaitForChild("Humanoid", 5)
+                    if humanoid and humanoid.PlatformStand then
+                        humanoid.PlatformStand = false
+                    end
+             end
+        end
+
     end
 end
 
