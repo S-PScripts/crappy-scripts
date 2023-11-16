@@ -28,7 +28,7 @@ print("nok/noobbykill - stops the obby bricks killing you")
 print("antigear - stops people from using gears")
 print("anticrash - stops people from crashing with gears")
 print("anticrash2 - stops people from crashing with gears")
-print("anticrash3 - stops people from crashing with gears")
+print("anticrash3 - stops people from crashing with gears (from the ids)")
 
 print("-----------TELEPORTS---------")
 print("house - teleport to the house")
@@ -100,10 +100,13 @@ print("slowplayer - slow a player/players down with the car gear. stops their pe
 print("nameducker - spam names a user/users. naming currently breaks your camera.")
 print("hcrash - spam h command that is full of emojis")
 
-
 print("-----------PAINTS------------")
 print("fixpaint - fix the paint")
 print("pmap (text) - paint the map a colour")
+
+print("----------PLR ABUSE----------")
+print("iptroll - pretend to say a random player's ip with some storyline (including you)")
+print("giforjif - the famous question. let's see if the random user picks has a brain, or chooses death...")
 
 print("-----------REVERSES----------")
 print("reversecrash - someone tries to crash, you crash first!")
