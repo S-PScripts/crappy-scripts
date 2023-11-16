@@ -1,4 +1,5 @@
 -- this is trash
+-- put this in autoattach
 local crashwl = {"t_echr", "BANNter_Original","SZCVAK", "Di33le2","Altsarecooleh","MrPetDog12345","Phoenictron","Ripend","Imaimashi","thekillercrum","crumsbot2","aligotoofed","sneakcal264"}
 continue = true
 for i, player in pairs(game.Players:GetPlayers()) do
