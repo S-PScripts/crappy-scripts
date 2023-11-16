@@ -4,6 +4,7 @@ antifire = true
 antifreeze = true
 antifly = true
 antikill = true
+antiname = true
 antimsg = true
 antipunish = true
 antirocket = true
@@ -218,6 +219,16 @@ local function Antis()
                 Chat("unjail me")
             end
         end
+       if antiname == true then
+          local player = game.Players:FindFirstChild(game.Players.LocalPlayer.Name)
+          if player and player.Character then
+                  local modelName = player.Character.Name
+                  local actualName = player.Name
+                  if modelName ~= actualName then
+                        Chat("reset me")
+                  end
+          end
+      end
     end
 end
 
