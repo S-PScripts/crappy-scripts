@@ -41,6 +41,11 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 			print("Current Music ID: "..workspace.Terrain._Game.Folder.Sound.SoundId)
 	end
    end
+   if command == ".volumern" then
+	      if workspace.Terrain._Game.Folder:FindFirstChild("Sound") then
+			      print("Current Volume: "..workspace.Terrain._Game.Folder.Sound.Volume)
+	      end	
+   end
    if string.sub(msg:lower(), 1, 14) == ".playbackspeed" then
 	local newPlaybackSpeed = tonumber(string.sub(msg:lower(), 16))
 	if newPlaybackSpeed ~= nil and workspace.Terrain._Game.Folder:FindFirstChild("Sound") then
