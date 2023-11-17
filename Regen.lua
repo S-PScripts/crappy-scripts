@@ -28,4 +28,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
                wait(0.01)
                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-31.0896435, 8.22999477, 70.522644, -0.999961913, 4.495271e-08, -0.0087288795, 4.55292621e-08, 1, -6.58523618e-08, 0.0087288795, -6.62472743e-08, -0.999961913)
            end
+           if command == ".killcam" then
+              game.Players:Chat("gear me 00000000000000000000000004842207161")
+              print("Right Click! If you're on mobile, it may not work tapping normally :P")
+           end
 end)
