@@ -22,15 +22,17 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if string.sub(msg:lower(), 0, 10) == ".permmusic" then
         musicoff = false
         mymusiconly = true
-        mymusiconlyid = string.sub(msg:lower(), 12)
+        mymusiconlyid = tonumber(string.sub(msg:lower(), 12))
         musiclover()
     end
     if command == ".unpermmusic" then
         mymusiconly = false
         musicoff = true
+	game.Players:Chat("music OFF")
     end
     if command == ".offmusic" then
         musicoff = true
+	game.Players:Chat("music OFF")
     end
     if command == ".onmusic" then
         musicoff = false
