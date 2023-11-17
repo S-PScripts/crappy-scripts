@@ -4,6 +4,7 @@ antifire = true
 antifreeze = true
 antifly = true
 antikill = true
+antijump = true
 antiname = true
 antimsg = true
 antipunish = true
@@ -58,6 +59,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         end
         if command == ".unantikill" then
             antikill = false
+        end
+        if command == ".antijump" then
+            antijump = true
+        end
+        if command == ".unantijump" then
+            antijump = false
         end
         if command == ".antiname" then
             antiname = true
@@ -179,7 +186,13 @@ local function Antis()
                 end
             end
         end
-        
+
+        if antijump == true then
+            if not game.Players.LocalPlayer.Character.Humanoid.JumpPower == 100 then
+                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+            end
+        end
+      
         if antimsg == true then
             for i, v in pairs(game.Players.LocalPlayer.PlayerGui:GetDescendants()) do
                 if v.Name == "MessageGUI" or v.Name == "Message" or v.Name == "HintGUI" or v.Name == "Ice" then
