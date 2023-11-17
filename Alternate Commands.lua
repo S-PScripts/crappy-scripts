@@ -12,6 +12,14 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
     if command == "respawn" then
           game.Players:Chat("respawn me")
     end
+    if string.sub(msg:lower(), 0, 7) == ".set jp" then
+		local jp = tonumber(string.sub(msg:lower(), 9))
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = jp
+	end    
+    if string.sub(msg:lower(), 0, 7) == ".set sp" then
+		local sp = tonumber(string.sub(msg:lower(), 9))
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = sp
+	end        
     if command == "refresh" or command == "reload" or command == "reset" or command == "re" then
           game.Players:Chat("reload me")
     end
