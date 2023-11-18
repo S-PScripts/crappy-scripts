@@ -3,6 +3,7 @@ antifire = true
 antifreeze = true
 antifly = true
 antikill = true
+antijump = true
 antipunish = true
 antirocket = true
 antiseizure = true
@@ -47,6 +48,12 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         end
         if command == ".unantikill" then
             antikill = false
+        end
+        if command == ".antijump" then
+            antijump = true
+        end
+        if command == ".unantijump" then
+            antijump = false
         end
         if command == ".antipunish" then
             antipunish = true
@@ -137,7 +144,13 @@ local function Antis()
                 end
             end
         end
-        
+
+        if antijump == true then
+            if not player.Name.Character.Humanoid.JumpPower == 100 then
+                Chat("jump "..player.Name.." 100")
+            end
+        end
+
         if antipunish == true then
             if game.Lighting:FindFirstChild(player.Name) then
                 Chat("unpunish "..player.Name)
