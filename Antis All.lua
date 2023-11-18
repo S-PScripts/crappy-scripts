@@ -29,78 +29,105 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
         if command == ".unanticlone" then
             anticlone = false
         end
+            
         if command == ".antifire" then
             antifire = true
         end
         if command == ".unantifire" then
             antifire = false
         end
+            
         if command == ".antifreeze" then
             antifreeze = true
         end
         if command == ".unantifreeze" then
             antifreeze = false
         end
+            
         if command == ".antifly" then
             antifly = true
         end
         if command == ".unantifly" then
             antifly = false
         end
+            
         if command == ".antikill" then
             antikill = true
         end
         if command == ".unantikill" then
             antikill = false
         end
+            
         if command == ".antijump" then
             antijump = true
         end
         if command == ".unantijump" then
             antijump = false
         end
+            
         if command == ".antipunish" then
             antipunish = true
         end
         if command == ".unantipunish" then
             antipunish = false
         end
+            
         if command == ".antirocket" then
             antirocket = true
         end
         if command == ".unantirocket" then
             antirocket = false
         end
+
+        if command == ".antiparticles" then
+            antiparticles = true
+        end   
+        if command == ".unantiparticles" then
+            antiparticles = false
+        end
+            
         if command == ".antiseizure" then
             antiseizure = true
         end
         if command == ".unantiseizure" then
             antiseizure = false
         end
+
+        if command == ".antiglow" then
+            antiglow = true
+        end
+        if command == ".unantiglow" then
+            antiglow = false
+        end
+            
         if command == ".antismoke" then
             antismoke = true
         end
         if command == ".unantismoke" then
             antismoke = false
         end
+            
         if command == ".antisparkles" then
             antisparkles = true
         end
         if command == ".unantisparkles" then
             antisparkles = false
         end
+            
         if command == ".antispeed" then
             antispeed = true
         end
         if command == ".unantispeed" then
             antispeed = false
         end
+            
         if command == ".antiswag" then
             antiswag = true
         end
         if command == ".unantiswag" then
             antiswag = false
         end
+            
         if command == ".antijail" then
             antijail = true
         end
