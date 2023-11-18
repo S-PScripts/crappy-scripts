@@ -3,6 +3,7 @@ anticlone = true
 antifire = true
 antifreeze = true
 antifly = true
+antiff = true
 antiglow = true
 antihealthc = true
 antikill = true
@@ -181,7 +182,13 @@ local function Antis()
                 Chat("clip me")
             end
         end
-        
+
+        if antiff = true then
+            if game.Players.LocalPlayer.Character.Torso:FindFirstChild("ForceField") then
+                Chat("unff me")
+            end
+        end
+            
         if antikill == true then
             if game.Players.LocalPlayer.Character then
                 if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
@@ -261,6 +268,7 @@ local function Antis()
                 Chat("unjail me")
             end
         end
+            
         if antiname == true then
           local player = game.Players:FindFirstChild(game.Players.LocalPlayer.Name)
           if player and player.Character then
@@ -271,6 +279,7 @@ local function Antis()
                   end
           end
         end
+            
         if antisit == true then
              local player = game.Players.LocalPlayer
              if player.Character then
@@ -281,6 +290,7 @@ local function Antis()
                     end
              end
         end
+            
         if antistun == true then
             local player = game.Players.LocalPlayer
              if player.Character then
@@ -291,12 +301,13 @@ local function Antis()
                     end
              end
         end
+            
         if antiglow == true then
             if game.Players.LocalPlayer.Character:FindFirstChild("PointLight") then
                   Chat("unglow me")
-
             end
         end
+            
         if antiparticles == true then
             if game.Players.LocalPlayer.Character:FindFirstChild("ParticleEmitter") then
                   Chat("unparticle me")
