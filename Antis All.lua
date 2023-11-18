@@ -1,6 +1,7 @@
 anticlone = true
 antifire = true
 antifreeze = true
+antiff = true
 antifly = true
 antikill = true
 antijump = true
@@ -208,6 +209,12 @@ local function Antis()
             if player.Name.Character:FindFirstChild("PointLight") then
                   Chat("unglow "..player.Name)
 
+            end
+        end
+
+        if antiff = true then
+            if player.Name.Character.Torso:FindFirstChild("ForceField") then
+                Chat("unff "..player.Name)
             end
         end
       
