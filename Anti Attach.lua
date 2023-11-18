@@ -4,7 +4,6 @@ local connections = {}
 plr.Chatted:Connect(function(msg)
     if goattach then 
         for _, v in pairs(game.Players:GetPlayers()) do
-            local connection = v.Chatted:Connect(function(message)
                 if message:lower() == "sit me" or message:lower() == ":sit me" and v ~= game.Players.LocalPlayer then
                    if antiattach then
                      game.Players:Chat("unsit"..v.Name)
@@ -19,8 +18,6 @@ plr.Chatted:Connect(function(msg)
                      game.Players:Chat('h '..v.Name..' trying to stun :saj:')
                    end
                 end
-            end)
-            table.insert(connections, connection)
         end
     end
 end)
