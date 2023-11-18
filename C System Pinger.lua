@@ -4,7 +4,6 @@ local connections = {}
 plr.Chatted:Connect(function(msg)
     if goping then 
         for _, v in pairs(game.Players:GetPlayers()) do
-            local connection = v.Chatted:Connect(function(message)
                 if message:lower():find("/w") or message:lower():find("/c") and v ~= game.Players.LocalPlayer then
                    if csystem then
                         print(v.Name..' is using /c system or whispering commands.')
@@ -17,8 +16,6 @@ plr.Chatted:Connect(function(msg)
                         game.Players:Chat('h '..v.Name..' is using logs.')
                    end
                 end
-            end)
-            table.insert(connections, connection)
         end
     end
 end)
