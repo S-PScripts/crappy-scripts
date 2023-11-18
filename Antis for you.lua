@@ -3,10 +3,13 @@ anticlone = true
 antifire = true
 antifreeze = true
 antifly = true
+antiglow = true
+antihealthc = true
 antikill = true
 antijump = true
 antiname = true
 antimsg = true
+antiparticles = true
 antipunish = true
 antirocket = true
 antiseizure = true
@@ -187,9 +190,15 @@ local function Antis()
             end
         end
 
+        if antihealthc == true
+            if not game.Players.LocalPlayer.Character.Humanoid.Health == 100 then
+                  Chat("health me 100")
+            end
+        end
+            
         if antijump == true then
-            if not game.Players.LocalPlayer.Character.Humanoid.JumpPower == 100 then
-                game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+            if not game.Players.LocalPlayer.Character.Humanoid.JumpPower == 50 then
+                game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
             end
         end
       
@@ -265,22 +274,34 @@ local function Antis()
         if antisit == true then
              local player = game.Players.LocalPlayer
              if player.Character then
-                    local humanoid = player.Character:WaitForChild("Humanoid", 5)
+                    local humanoid = player.Character:WaitForChild("Humanoid", 1)
                     if humanoid and humanoid.Sit then
                         humanoid.Sit = false
+                        Chat("unsit me")
                     end
              end
         end
         if antistun == true then
             local player = game.Players.LocalPlayer
              if player.Character then
-                    local humanoid = player.Character:WaitForChild("Humanoid", 5)
+                    local humanoid = player.Character:WaitForChild("Humanoid", 1)
                     if humanoid and humanoid.PlatformStand then
                         humanoid.PlatformStand = false
+                        Chat("unstun me")
                     end
              end
         end
+        if antiglow == true then
+            if game.Players.LocalPlayer.Character:FindFirstChild("EpicCape") then
+                  Chat("unglow me ")
 
+            end
+        end
+        if antiparticles == true then
+            if game.Players.LocalPlayer.Character:FindFirstChild("ParticleEmitter") then
+                  Chat("unparticle "..plrname)
+            end
+        end
     end
 end
 
