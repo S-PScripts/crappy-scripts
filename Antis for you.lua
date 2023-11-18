@@ -292,14 +292,14 @@ local function Antis()
              end
         end
         if antiglow == true then
-            if game.Players.LocalPlayer.Character:FindFirstChild("EpicCape") then
-                  Chat("unglow me ")
+            if game.Players.LocalPlayer.Character:FindFirstChild("PointLight") then
+                  Chat("unglow me")
 
             end
         end
         if antiparticles == true then
             if game.Players.LocalPlayer.Character:FindFirstChild("ParticleEmitter") then
-                  Chat("unparticle "..plrname)
+                  Chat("unparticle me")
             end
         end
     end
