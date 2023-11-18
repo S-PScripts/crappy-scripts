@@ -12,6 +12,9 @@ antisparkles = true
 antispeed = true
 antiswag = true
 antijail = true
+antiparticles = true
+antiglow = true
+antihealthc = true
 
 local function Chat(msg)
       game.Players:Chat(msg)
@@ -109,7 +112,7 @@ local function Antis()
     while true do
         task.wait()
         for _, player in ipairs(game.Players:GetPlayers()) do
-        
+ 
         if anticlone == true then
             if game:GetService("Workspace").Terrain["_Game"].Folder:FindFirstChild(player.Name) then
                 Chat("unclone"..player.Name)
@@ -147,7 +150,7 @@ local function Antis()
 
         if antijump == true then
             if not player.Name.Character.Humanoid.JumpPower == 100 then
-                Chat("jump "..player.Name.." 100")
+                Chat("norrmaljump "..player.Name)
             end
         end
 
@@ -200,6 +203,26 @@ local function Antis()
                 Chat("unjail "..player.Name)
             end
         end
+                  
+        if antiglow == true then
+            if player.Name.Character:FindFirstChild("PointLight") then
+                  Chat("unglow "..player.Name)
+
+            end
+        end
+      
+        if antiparticles == true then
+            if player.Name.Character:FindFirstChild("ParticleEmitter") then
+                  Chat("unparticle "..player.Name)
+            end
+        end
+                  
+        if antihealthc == true then
+            if not player.Name.Character.Humanoid.Health == 100 then
+                  Chat("health"..player.Name.." 100")
+            end
+        end
+                  
         end
     end
 end
